@@ -21,9 +21,6 @@ app.get('*', (req, res) => {
     res.sendFile('build/index.html', {root: root});
 });
 
-const port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
 const debug = require('debug')('react-express:server');
 const http = require('http');
 
@@ -31,7 +28,7 @@ const http = require('http');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(process.env.PORT || '3001');
 app.set('port', port);
 
 /**
@@ -53,7 +50,7 @@ server.on('listening', onListening);
  */
 
 function normalizePort(val) {
-  const port = parseInt(val, 10);
+  let port = parseInt(val, 10);
 
   if (isNaN(port)) {
     // named pipe
