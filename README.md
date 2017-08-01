@@ -2,6 +2,9 @@
 
 This is a template for using Express and React in the same project. It is based on Create React App.
 
+## Prerequisites
+* [create-react-app](https://github.com/facebookincubator/create-react-app)
+
 ## Installing
 
 ```bash
@@ -17,7 +20,7 @@ The template can be run in development, or in production. For development, use t
 ### Start the Express Server
 
 ```bash
-node server.js
+node server/server.js
 ```
 
 ### Start Create React App
