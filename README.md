@@ -51,4 +51,4 @@ In production, you want Express to serve up your app.
 npm build
 ```
 
-Now simply visit the Express app at 'http://localhost:3000' and you will see your app served from the 'build' folder. That's all there is to it!
+Now simply visit the Express app at 'http://localhost:3001' and you will see your app served from the 'build' folder. That's all there is to it!
