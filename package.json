@@ -6,7 +6,9 @@
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
+    "jade": "^1.11.0",
     "morgan": "^1.8.2",
+    "debug": "~2.6.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
