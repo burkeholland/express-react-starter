@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './Navbar';
+import LaLiga from './LaLiga';
+import Champions from './ligas/Champions';
 
 class App extends Component {
   constructor() {
@@ -21,9 +25,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>{this.state.message}</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <NavBar />
+        <main>
+          <Switch>
+            <Route path="/champions" component={Champions} />
+            <Route path="/laliga" component={LaLiga} />
+            {/* <Route path="/epl" component={EPL} />
+            <Route path="/seriea" component={SerieA} /> */}
+          </Switch>
+        </main>
+        {/* <LaLiga /> */}
       </div>
     );
   }
