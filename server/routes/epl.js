@@ -5,7 +5,7 @@ const requestPromise = require('request-promise')
 router.get('/matchday', function(req, res, next) {
     const url =
     {
-        uri: 'http://api.football-data.org/v1/competitions/464',
+        uri: 'http://api.football-data.org/v1/competitions/445',
         headers: {
         'X-Response-Control': 'minified',
         'X-Auth-Token': 'ea068c8bc152429c9fdca1afec179924'
@@ -27,7 +27,7 @@ router.get('/matchday', function(req, res, next) {
     const matchdayId = req.params.matchdayId;
     const url =
     {
-        uri: `http://api.football-data.org/v1/competitions/464/fixtures?matchday=${matchdayId}`,
+        uri: `http://api.football-data.org/v1/competitions/445/fixtures?matchday=${matchdayId}`,
         headers: {
         'X-Response-Control': 'minified',
         'X-Auth-Token': 'ea068c8bc152429c9fdca1afec179924'
@@ -47,7 +47,7 @@ router.get('/matchday', function(req, res, next) {
 router.get('/next', function(req, res, next) {
   const url =
   {
-      uri: 'http://api.football-data.org/v1/competitions/464/fixtures?timeFrame=n7',
+      uri: 'http://api.football-data.org/v1/competitions/445/fixtures?timeFrame=n7',
       headers: {
       'X-Response-Control': 'minified',
       'X-Auth-Token': 'ea068c8bc152429c9fdca1afec179924'
@@ -67,7 +67,7 @@ router.get('/next', function(req, res, next) {
 router.get('/prev', function(req, res, next) {
   const url =
   {
-      uri: 'http://api.football-data.org/v1/competitions/464/fixtures?timeFrame=p7',
+      uri: 'http://api.football-data.org/v1/competitions/445/fixtures?timeFrame=p7',
       headers: {
       'X-Response-Control': 'minified',
       'X-Auth-Token': 'ea068c8bc152429c9fdca1afec179924'

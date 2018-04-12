@@ -5,6 +5,8 @@ import './App.css';
 import NavBar from './Navbar';
 import LaLiga from './LaLiga';
 import Champions from './ligas/Champions';
+import EPL from './ligas/EPL';
+import SerieA from './ligas/SerieA';
 
 class App extends Component {
   constructor() {
@@ -30,8 +32,8 @@ class App extends Component {
           <Switch>
             <Route path="/champions" component={Champions} />
             <Route path="/laliga" component={LaLiga} />
-            {/* <Route path="/epl" component={EPL} />
-            <Route path="/seriea" component={SerieA} /> */}
+            <Route path="/epl" component={EPL} />
+            <Route path="/seriea" component={SerieA} />
           </Switch>
         </main>
         {/* <LaLiga /> */}
