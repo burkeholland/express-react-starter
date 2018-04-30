@@ -20,6 +20,9 @@ router.get('/matchday', function(req, res, next) {
         console.log(json.currentMatchday);
         return res.send({matchday: json.currentMatchday});
     })
+    // .catch(e => {
+    //     res.send(500);
+    // }
   });
 
   router.get('/today/:matchdayId', function(req, res, next) {
@@ -80,8 +83,5 @@ router.get('/prev', function(req, res, next) {
   })
 });
 
-router.get('/today', function(req, res, next) {
-  res.json('Hey My Ass Stinks');
-});
 
 module.exports = router;

@@ -4,6 +4,11 @@ export const Scoreboard = (props) => {
     // console.log('test', props.fixture)
     const {awayTeamName, homeTeamName, status, date } = props.fixture;
     const { goalsAwayTeam, goalsHomeTeam } = props.fixture.result;
+
+    const year = date.slice(0,4);
+    const month = date.slice(6,7);
+    const day = date.slice(9,10);
+
     return (
         <div className="score-child">
             <div className="scoreboard">
@@ -12,7 +17,7 @@ export const Scoreboard = (props) => {
                     <div className="away-team">{awayTeamName}</div>
                     <div className="home-score"><h1>{goalsHomeTeam}</h1></div>
                     <div className="away-score"><h1>{goalsAwayTeam}</h1></div>
-                <div className="stats"> <h4>GAME STATISTICS</h4>
+                <div className="btn btn-success"> <p> {month} - {day} - {year}</p>
                 </div>
                     {/* <div className="home-goals"><i className="fas fa-futbol"></i>33 Neymar <i className="fas fa-futbol"></i>37 Coutinho</div>
                     <div className="goals">G</div>

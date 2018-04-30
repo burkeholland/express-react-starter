@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Navbar';
-import LaLiga from './LaLiga';
+import LaLiga from './ligas/Liga';
 import Champions from './ligas/Champions';
 import EPL from './ligas/EPL';
 import SerieA from './ligas/SerieA';
