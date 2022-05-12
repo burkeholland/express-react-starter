@@ -18,9 +18,8 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start":
-      "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
-    "build": "react-scripts build && mv build server",
+    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "build": "react-scripts build && node copy.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
