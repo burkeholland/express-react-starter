@@ -1,27 +1,52 @@
 {
-  "name": "express-react-starter",
+  "name": "src",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "cookie-parser": "^1.4.3",
-    "debug": "~2.6.3",
-    "express": "^4.15.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "@azure/cosmos": "^3.15.1",
+    "body-parser": "^1.20.0",
+    "bulma": "^0.9.4",
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "jade": "^1.11.0",
-    "morgan": "^1.8.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.12.0",
-    "react-scripts": "1.0.10"
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.16"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
-    "build": "react-scripts build && node copy.js",
-    "test": "react-scripts test --env=jsdom",
+    "build": "BUILD_PATH='./build/client' react-scripts build && node copy.js",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "proxy": "http://localhost:3001"
 }

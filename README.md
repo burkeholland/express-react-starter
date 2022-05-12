@@ -7,7 +7,8 @@ Read the article: [Introducing Express React Starter](https://medium.com/burke-k
 OR...
 
 ## Prerequisites
-* [create-react-app](https://github.com/facebookincubator/create-react-app)
+
+- [create-react-app](https://github.com/facebookincubator/create-react-app)
 
 ## Installing
 
@@ -24,20 +25,12 @@ The template can be run in development, or in production. For development, use t
 ### Start the Express Server
 
 ```bash
-node server/server.js
-```
-
-### Start Create React App
-
-In a different terminal tab...
-
-```bash
 npm start
 ```
 
-![Imgur](http://i.imgur.com/f7Nlvx4.png)
+![Imgur](https://i.imgur.com/62fQTfJ.png)
 
-The "Welcome to React" is a message that comes from the Express server. 
+This will start both the frontend and API. Both will be reloaded automatically when you make changes.
 
 ### What Is Happening Here?
 
@@ -53,6 +46,12 @@ In production, you want Express to serve up your app.
 
 ```bash
 npm build
+```
+
+This will build the entire app into the "build" folder. This is the folder that you would deploy to your server. The entrypoint is `server.js`. You can test the production build locally by running...
+
+```bash
+node build/server.js
 ```
 
 Now simply visit the Express app at 'http://localhost:3001' and you will see your app served from the 'build' folder. That's all there is to it!
