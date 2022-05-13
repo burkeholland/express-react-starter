@@ -1,11 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
+/* GET /api/message */
 router.get("/message", function (req, res, next) {
-  res.json({
-    title: "Hello from the API!",
-    details: "Checkout the API at server/routes/index.js",
-  });
+  res.json("Hello from the API!");
 });
 
 module.exports = router;

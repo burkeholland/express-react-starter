@@ -1,30 +1,35 @@
-import react, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     getMessage();
   }, []);
 
   async function getMessage() {
-    const response = await fetch("/api/message");
-    const json = await response.json();
+    const result = await fetch("/api/message");
+    const json = await result.json();
+
     setMessage(json);
   }
 
   return (
     <div className="App">
-      <div className="App-header">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>{message.title}</h2>
-        <p>{message.details}</p>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+        <p>{message}</p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }

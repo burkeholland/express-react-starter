@@ -17,8 +17,7 @@ async function copyDir(src, dest) {
 }
 
 async function main() {
-  await copyDir("server", "build");
-  await fs.copyFile("./package.json", "./build/package.json");
+  await copyDir("build", "server/build");
 }
 
 main();
